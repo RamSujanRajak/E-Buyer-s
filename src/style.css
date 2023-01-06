@@ -1,0 +1,186 @@
+/**
+*!dafjiuids
+
+**/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(161, 162, 153);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 10px;
+}
+i{
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+/**
+*! nevbar section
+**/
+
+.nevbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgb(26, 69, 37);
+    color: wheat;
+    font-size: 20px;
+    padding: 25px  60px;
+    margin-bottom: 30px;
+}
+.cart{
+    position: relative;
+    background-color: white;
+    color: black;
+    font-size: 30px;
+    padding: 5px;
+    border-radius: 50px;
+}
+.cartamount{
+  position: absolute;
+  top: -15px;
+  right: -5px;
+  font-size: 16px;
+  background-color: red;
+  color: white;
+  padding: 3px;
+  border-radius: 3px;
+}
+/**
+* !
+**/
+.shop{
+    display: grid;
+    grid-template-columns: repeat(4,223px);/** this one is use for how many boxes of cart we need in web side **/
+    gap: 30px;
+    justify-content: center;/**for align item to center in web page **/
+}
+/** "media" use for make responsive web site   **/
+@media(max-width:1000px){
+    .shop{
+        grid-template-columns: repeat(2,223px);
+    }
+}
+@media(max-width:500px){
+    .shop{
+        grid-template-columns: repeat(1,223px);
+    }
+}
+.item{
+    border: 2px solid black ;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+.details{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+}
+.price-quantity{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.buttons{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    font-size: 16px;
+}
+.bi-plus-lg{
+    color: red;
+    
+}
+.bi-dash-lg{
+    color: blue;
+}
+/*
+! style rule for lable and some button
+*/
+
+.text-center {
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 20px;
+}     
+.HomeBtn{
+   background-color: #11406f;
+   color: white; 
+   border-radius: 10px;
+   padding: 6px;
+   cursor: pointer;
+   margin-top: 10px;
+   transition: ease-in-out .5s;
+   
+}
+.HomeBtn:hover{
+    box-shadow: 2px 5px #4972e2;
+    transition: ease-in-out .5s;
+    width: 110px;
+    height: 35px;
+}
+
+
+/**
+* ! style rules for cart-item
+**/
+.shopping-cart{
+    display: grid;
+    grid-template-columns: repeat(2,320px);
+    justify-content: center;
+    gap: 15px;
+    background-color: rgb(161, 162, 153);
+}
+
+.cart-item {
+    border: 2px solid #212529;
+    border-radius: 5px;
+    display: flex;
+    margin-left: 20px;
+    justify-content:center;
+    flex-direction: row;
+    margin-bottom: 20px;
+  }
+  
+  .title-price-x {
+    width: 195px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* border: 2px solid red; */
+  }
+  .bi-x-lg{
+    color: rgb(225, 255, 126);
+  }
+  
+  .title-price {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .cart-item-price {
+    background-color: #212529;
+    color: white;
+    border-radius: 4px;
+    padding: 3px 6px;
+  }
+  .checkout {
+    background-color: rgb(48, 226, 48);
+    border-radius: 5px;
+    padding: 5px;
+  }
+  .removeAll {
+    padding: 5px;
+    border-radius: 5px;
+    background-color: rgb(52, 31, 31);
+    color: white;
+  }
