@@ -20,12 +20,12 @@ let generateCartItems = ()=>{
         
         return `
         <div  class="cart-item">
-        <img width="100" src=${search.img} alt="" />
+        <img width="100" Class="img" src=${search.img} alt="" />
         <div class="details">
           <div class="title-price-x">
               <h4 class="title-price">
                 <p>${search.name}</p>
-                <p class="cart-item-price"> ${search.prise}</p>
+                <p class="cart-item-price">$ ${search.prise}</p>
               </h4>
               <i onclick="removeItem(${id})" class="bi bi-x-lg"></i>
           </div>
@@ -45,7 +45,7 @@ let generateCartItems = ()=>{
     
         ShoppingCart.innerHTML=``;
         label.innerHTML=`
-        <h2> Cart is Empty </h2>
+        <h2 style="font-size: 1.5rem;" > Cart is Empty </h2>
         <a href = "index.html">
             <button class = "HomeBtn"> Back To Home</button>
         </a>
@@ -121,9 +121,11 @@ let increment = (id) => {
         .reduce((x, y) => x + y, 0);
       // console.log(amount);
       label.innerHTML = `
-      <h2>Total Bill : $ ${amount}</h2>
-      <button class="checkout">Checkout</button>
-      <button onclick="clearCart()" class="removeAll">Clear Cart</button>
+      <h2 style="font-size: 1.5rem;" class="total"  >Total Bill : $ ${amount}</h2>
+      <a href="./index.html">
+      <button class="button"><span>Home Page</span></button>
+        </a>
+      <button onclick="clearCart()" class="button"><span>Clear Cart<span></button>
       `;
     } else return;
   };
