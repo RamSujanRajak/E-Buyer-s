@@ -1,2 +1,2 @@
-# E-Commerce-JS
+# E-Buyer’s
 JAVASCRIPT WEB SITE
