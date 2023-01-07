@@ -66,9 +66,11 @@ a{
         grid-template-columns: repeat(2,223px);
     }
 }
-@media(max-width:500px){
+@media(max-width:390px){
     .shop{
-        grid-template-columns: repeat(1,223px);
+        grid-template-columns: repeat(3,223px);
+        width: auto;
+        
     }
 }
 .item{
