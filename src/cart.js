@@ -45,9 +45,9 @@ let generateCartItems = ()=>{
     
         ShoppingCart.innerHTML=``;
         label.innerHTML=`
-        <h2 style="font-size: 1.5rem;" > Cart is Empty </h2>
+        <h2 style="font-size: 2.5rem;" > Cart is Empty </h2>
         <a href = "index.html">
-            <button class = "HomeBtn"> Back To Home</button>
+            <button class = "button"> Back To Home</button>
         </a>
         `;
     }
