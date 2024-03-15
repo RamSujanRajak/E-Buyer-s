@@ -6,6 +6,8 @@ let shop = document.getElementById('shop');
 */
 let basket = JSON.parse(localStorage.getItem("Ram")) || []
 
+console.log("here i have change some code which you can't see ")
+
 let generateShop = ()=>{
     return (shop.innerHTML= ShopItemsData
         .map((x)=>{
