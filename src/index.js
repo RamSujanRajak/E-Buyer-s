@@ -6,17 +6,13 @@ let shop = document.getElementById('shop');
 */
 let basket = JSON.parse(localStorage.getItem("Ram")) || []
 
-console.log("here i have change some code which you can't see ")
 
 let generateShop = ()=>{
     return (shop.innerHTML= ShopItemsData
         .map((x)=>{
             let{id, name,prise,desc,img }= x;
             let search = basket.find((x)=> x.id===id) || []
-            /** 
-             *! yaha par hamne jo uper code likha he 39 line me usko mene x.name, x.prise etc ko na likhna pade 
-             *! esliye likha line number 45 se le kar 60 tak ke bich me 
-            **/
+            
         return `
         <div id = product-id-${id} class="item">
         <img width="209" src="${img}" alt="t-shirt">
@@ -83,10 +79,9 @@ let decrement = (id) => {
      else{
         search.item -= 1;
      }
-     update(SelectItem.id);// it decrese the value of cart ammount
+     update(SelectItem.id);
    
      basket = basket.filter((x)   => x.item !==0);
- //console.log(basket);
    
     localStorage.setItem("Ram", JSON.stringify(basket)) ;
 };
@@ -103,9 +98,7 @@ let update = (id) => {
 let calculate = ()=>{
     let carticon = document.getElementById("cartAmount")
     carticon.innerHTML= (basket.map((x)=> x.item).reduce((x,y) => x + y , 0 ));
-    /*
-    ! reduce funtion ko hamne yaha per items ko add karne ke liye use kiya gaya he 
-    */
+    
 }
 
-calculate();//yaha per calculate likhe he khuki jise cart ka amount number update ho jaye jab ham page ko reloade kare 
+calculate();
